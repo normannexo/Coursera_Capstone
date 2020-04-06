@@ -1,11 +1,14 @@
 # Applied Data Science Capstone
 Repository for the capstone project of the Coursera Data Science course.
 
-### Week 1
+#### Week 1
 
 Files:
 - `capstone_project.ipynb` - very simple notebook file for the first week's assignment
 
+##### Week 2
+
+No files necessary
 
 #### Week 3
 Segmenting and Clustering Neighborhoods in the city of Toronto, Canada

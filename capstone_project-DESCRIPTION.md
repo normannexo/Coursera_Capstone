@@ -1,14 +1,6 @@
 # IBM Coursera - Capstone Project Report
 Capstone project for the Coursera Data Science course.
 
-### Table of content
-1. [Introduction](#intro)
-2. [Data](#data)
-3. [Methodology](#methods)
-4. [Results](#methods)
-5. [Discussion](#methods)
-6. [Conclusion](#methods)
-
 <a name="intro"></a>
 ## 1. Introduction/Business Problem
 Despite the ongoing global turmoil caused by the spread of the novel coronavirus and the restrictions
@@ -19,18 +11,3 @@ to travel to foreign countries and cities will be unbroken in the foreseeable fu
 ## 2. Data
 To solve our problem we will use data from http://insideairbnb.com/index.html, a website sourcing
 publicly available information from the Airbnb site. This data includes listings of accomodations of more than hundred cities worldwide, along with geo data of the cities' neighbourhoods. We will use the price and room type information of the listings data along with venues information from the Foursquare API to build a meaningful and characteristic feature set for each neighbourhood of a specific city and then apply a K-Means model to gain clusters of similar city districts.
-
-<a name="methods"></a>
-## 3. Methodology
-Methodology section which represents the main component of the report where you discuss and describe any exploratory data analysis that you did, any inferential statistical testing that you performed, if any, and what machine learnings were used and why.
-<a name="results"></a>
-## 4. Results
-Results section where you discuss the results.
-
-<a name="discussion"></a>
-## 5. Discussion
-Discussion section where you discuss any observations you noted and any recommendations you can make based on the results.
-
-<a name="conclusion"></a>
-## 7. Conclusion
-Conclusion section where you conclude the report.
