@@ -1,6 +1,11 @@
 # IBM Coursera - Capstone Project Report
 Capstone project for the Coursera Data Science course.
 
+### Clustering neighbourhoods
+
+![alt text](./img/london_map_clusters.jpg)
+
+
 ### Table of content
 1. [Introduction](#intro)
 2. [Data](#data)
@@ -17,15 +22,61 @@ to travel to foreign countries and cities will be unbroken in the foreseeable fu
 
 <a name="data"></a>
 ## 2. Data
-To solve our problem we will use data from http://insideairbnb.com/index.html, a website sourcing
+To address our problem we will use data from http://insideairbnb.com/index.html, a website sourcing
 publicly available information from the Airbnb site. This data includes listings of accomodations of more than hundred cities worldwide, along with geo data of the cities' neighbourhoods. We will use the price and room type information of the listings data along with venues information from the Foursquare API to build a meaningful and characteristic feature set for each neighbourhood of a specific city and then apply a K-Means model to gain clusters of similar city districts.
+
+Data used in the project:
+1. Airbnb data from http://insideairbnb.com/index.html:
+- `listings.csv` Summary information and metrics for listings in a specific city
+- `neighbourhoods.csv`
+- `neighbourhoods.geojson` GeoJSON file of neighbourhoods of the city, mainly used for data visualizations
+2. Foursquare API to retrieve the venues for the neighbourhoods of a specific city.
+
+
 
 <a name="methods"></a>
 ## 3. Methodology
-Methodology section which represents the main component of the report where you discuss and describe any exploratory data analysis that you did, any inferential statistical testing that you performed, if any, and what machine learnings were used and why.
+We will use the web scraping library Beautiful Soup to gather data from the insideairbnb archive. Insideairbnb offers geo information, listings, calendar and reviews data for each of
+the currently 100 cities in the archive. We are especially interested in the most recent listings and neighbourhood data, so our defined helper functions take a list of specific cities and downloads the most current lisitings.csv, neighbourhoods.csv and neighbourhoods.geojson to subfolders.
+Our starting point for building up our data set for the is the `listings` file. We take the data from this file, group it by neighbourhood and
+collect the first features for our subsequent analysis:
+- airbnb_price_level: We use the average price values for each neighbourhood as an overall price indicator. To be able to compare price levels to other cities we additionally normalize the price data.
+- room types: We calculate the distribution of offered room types (private room, shared room, hotel room, etc.) in each neighbourhood and store them in extra columns to use them as a feature for creating our clusters in later steps.
+
+We also use the longitude and latitude of each listing to calculate mean values for each neighbourhood, which we use later on to retrieve venue data via the Foursquare API.
+
+#### Exploring via Foursquare API
+
+Foursquare uses a hierarchical category system and we will use the top level category of each venue for our analysis. So we have to get all categories first and
+store them into an extra data frame to look up the top level category for our venue search results later.
+
+We then fetch venue data for all neighbourhoods for the city in question and apply 3 operations to our result list:
+1. mapping the top level category to each venue by looking up the venue category in our foursquare category table
+2. tidy up the data and get rid of abundant and unnecessary data
+3. create dummy columns for all categories
+4. group the data by neighbourhood.
+
+So now we have collected all features being used for the creation of helpful clusters:
+- price level (with the airbnb_price_level as an indicator)
+- distribution of room types (as an indicator which type of rooms prevail in certain clusters)
+- distribution of a neighbourhoods venue categories
+
+##### Clustering
+
+We are now able to apply machine learning algorithms to our data and will use k-means for our clustering since it is a powerful
+and proven algorithm for partitioning data into clusters. We apply preprocessing to our data by scaling it with the Scikit-Learn's StandardScaler object.
+We try to calculate an optimal number of clusters by applying the elbow method.
+After applying the algorithm we merge our resulting cluster labels to our data.
+
+We then use visualizations like the following to derive specific characteristics from our clusters:
+![alt text](./img/img1.jpg)
+
+
 <a name="results"></a>
 ## 4. Results
-Results section where you discuss the results.
+In our project we used the data for the city of London as an example. We got 
+
+
 
 <a name="discussion"></a>
 ## 5. Discussion
