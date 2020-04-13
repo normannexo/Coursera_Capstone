@@ -3,7 +3,7 @@ Capstone project for the Coursera Data Science course.
 
 ### Clustering neighbourhoods
 
-![alt text](./img/london_map_clusters.jpg)
+![alt text](https://raw.githubusercontent.com/normannexo/Coursera_Capstone/master/img/london_map_clusters.jpg)
 
 
 ### Table of content
@@ -69,7 +69,7 @@ We try to calculate an optimal number of clusters by applying the elbow method.
 After applying the algorithm we merge our resulting cluster labels to our data.
 
 We then use visualizations like the following to derive specific characteristics from our clusters:
-![alt text](./img/img1.jpg)
+![alt text](https://raw.githubusercontent.com/normannexo/Coursera_Capstone/master/img/img1.JPG)
 
 
 <a name="results"></a>
@@ -78,20 +78,20 @@ We then use visualizations like the following to derive specific characteristics
 ### Getting data for London
 In our project we used the data for the city of London as an example. We got data for 33 neighbourhoods from the airbnb listings data.
 We retrieved 888 venues from Foursquare which were distributed to venue categories as shown below:
-![alt text](./img/venues_cat.jpg)
+![alt text](https://raw.githubusercontent.com/normannexo/Coursera_Capstone/master/img/venues_cat.jpg)
 
 ### Clustering data
 The elbow method for determining an optimal value for k gave the following result:
-![alt text](./img/elbow.jpg)
+![alt text](https://raw.githubusercontent.com/normannexo/Coursera_Capstone/master/img/elbow.jpg)
 
 No unequivocal value was found, so we used $$k=4$$ for our model.
 
 We achieved the following cluster map of London:
-![cluster map](./img/london_map_clusters.JPG)
+![cluster map](https://raw.githubusercontent.com/normannexo/Coursera_Capstone/master/img/london_map_clusters.JPG)
 
 To get an understanding for the caracteristics of each cluster, we plotted barcharts with the average value
 for each feature by cluster:
-![avg features](./img/avg_cluster.jpg)
+![avg features](https://raw.githubusercontent.com/normannexo/Coursera_Capstone/master/img/avg_cluster.jpg)
 
 So we get the following major insights into our clusters:
 
