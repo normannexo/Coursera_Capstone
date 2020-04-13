@@ -74,14 +74,40 @@ We then use visualizations like the following to derive specific characteristics
 
 <a name="results"></a>
 ## 4. Results
-In our project we used the data for the city of London as an example. We got 
 
+### Getting data for London
+In our project we used the data for the city of London as an example. We got data for 33 neighbourhoods from the airbnb listings data.
+We retrieved 888 venues from Foursquare which were distributed to venue categories as shown below:
+![alt text](./img/venues_cat.jpg)
+
+### Clustering data
+The elbow method for determining an optimal value for k gave the following result:
+![alt text](./img/elbow.jpg)
+
+No unequivocal value was found, so we used $$k=4$$ for our model.
+
+We achieved the following cluster map of London:
+![cluster map](./img/london_map_clusters.JPG)
+
+To get an understanding for the caracteristics of each cluster, we plotted barcharts with the average value
+for each feature by cluster:
+![avg features](./img/avg_cluster.jpg)
+
+So we get the following major insights into our clusters:
+
+- **Cluster 0** (e.g. Westminster, City of London): high price level, few private rooms, many restaurants
+- **Cluster 1** (e.g. Brent, Newham): relatively low price level, many private rooms, many shops
+- **Cluster 2** (e.g. Bromley, Croydon): low price level, many private rooms, many outdoors & recreation venues
+- **Cluster 3** (e. g. Camden, Islington): moderate price level, many private rooms, many nightlife venues
 
 
 <a name="discussion"></a>
 ## 5. Discussion
-Discussion section where you discuss any observations you noted and any recommendations you can make based on the results.
+In the previous sections we developed a promising approach to a helpful clustering of city data that might be
+useful for the customers of travel companies when planning city trips. We focussed on specific features of
+venue data of the neighbourhoods and used certain properties of airbnb listings as indicators for price level, etc.
+Certainly, it would be useful to elaborate more neighbourhood features like transportation services to make the model even more precise.
 
 <a name="conclusion"></a>
-## 7. Conclusion
-Conclusion section where you conclude the report.
+## 6. Conclusion
+Our approach to develop a clustering model for cities seems to be good 

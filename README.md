@@ -25,3 +25,4 @@ Files:
 #### Week 5
 - `capstone_project-REPORT.md`
 - `capstone_project-NOTEBOOK.ipynb`
+- `capstone_project-PRESENTATION.pptx`
