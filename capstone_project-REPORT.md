@@ -3,7 +3,7 @@ Capstone project for the Coursera Data Science course.
 
 ### Clustering neighbourhoods
 
-![alt text](https://raw.githubusercontent.com/normannexo/Coursera_Capstone/master/img/london_map_clusters.jpg)
+![alt text](https://raw.githubusercontent.com/normannexo/Coursera_Capstone/master/img/london_map_clusters.JPG)
 
 
 ### Table of content
@@ -82,7 +82,7 @@ We retrieved 888 venues from Foursquare which were distributed to venue categori
 
 ### Clustering data
 The elbow method for determining an optimal value for k gave the following result:
-![alt text](https://raw.githubusercontent.com/normannexo/Coursera_Capstone/master/img/elbow.jpg)
+![alt text](https://raw.githubusercontent.com/normannexo/Coursera_Capstone/master/img/elbow.JPG)
 
 No unequivocal value was found, so we used $$k=4$$ for our model.
 
