@@ -106,8 +106,13 @@ So we get the following major insights into our clusters:
 In the previous sections we developed a promising approach to a helpful clustering of city data that might be
 useful for the customers of travel companies when planning city trips. We focussed on specific features of
 venue data of the neighbourhoods and used certain properties of airbnb listings as indicators for price level, etc.
-Certainly, it would be useful to elaborate more neighbourhood features like transportation services to make the model even more precise.
+Certainly, it would be useful to elaborate more neighbourhood features like transportation services, age distribution,
+real estate prices, to make the model even more precise.
 
 <a name="conclusion"></a>
 ## 6. Conclusion
-Our approach to develop a clustering model for cities seems to be good 
+Our approach to developing a clustering model for cities seems to be a good starting point for more ambitious projects
+involving additional features (some of them mentioned in the discussions section above) and enhanced functionality:
+We could add other cities to make them more comparable, build a common feature set and apply our clustering to all
+of them simultaneously, so that travellers knowing one city can easily infer characteristics from
+neighbourhoods they are already familiar with to cities they are about to explore.

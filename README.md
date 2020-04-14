@@ -23,6 +23,6 @@ Files:
 - `capstone_project-DESCRIPTION.md` Markdown file with introduction and data description of the capstone project
 
 #### Week 5
-- `capstone_project-REPORT.md`
-- `capstone_project-NOTEBOOK.ipynb`
-- `capstone_project-PRESENTATION.pptx`
+- `capstone_project-REPORT.md` Markdown file with the project's report
+- `capstone_project-NOTEBOOK.ipynb` Markdown file with the project's notebook
+- `capstone_project-PRESENTATION.pdf` Markdown file with the project's presentation
